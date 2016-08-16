@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UniWoo Tweaks
 // @namespace    https://github.com/BinaryZeph/UniWoo/
-// @version      0.3
+// @version      0.4
 // @description  Small tweaks for UniWoo Power Users
 // @author       Tim Rainey
 // @match        http://uniwoo.com/
