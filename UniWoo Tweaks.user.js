@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UniWoo Tweaks
 // @namespace    https://github.com/BinaryZeph/UniWoo
-// @version      0.8
+// @version      0.9
 // @description  Small tweaks for UniWoo Power Users
 // @author       Tim Rainey
 // @match        http://uniwoo.com/
@@ -27,9 +27,14 @@ $(document).ready(function() {
     //Listen for Link Clicks
     $( "#uniwooTweaks" ).click(function() {
         //Update Modal Data
-        $("#uniwooTweaksInfo-BPCardCode").html(TSForm.loadedData[TSForm.masterObj].U_BPCardCode);
-        $("#uniwooTweaksInfo-BPContactCode").html(TSForm.loadedData.woInitialContact.Code);
-        
+		if (typeof(TSForm.loadedData[TSForm.masterObj]) != "undefined" && TSForm.loadedData[TSForm.masterObj].U_BPCardCode !== null){
+			$("#uniwooTweaksInfo-BPCardCode").html(TSForm.loadedData[TSForm.masterObj].U_BPCardCode);
+			$("#uniwooTweaksInfo-BPContactCode").html(TSForm.loadedData.woInitialContact.Code);
+		} else {
+			$("#uniwooTweaksInfo-BPCardCode").html('');
+			$("#uniwooTweaksInfo-BPContactCode").html('');
+		}
+
         $( "#uniwooTweaksMenu-Default" ).dialog();
     });
     
