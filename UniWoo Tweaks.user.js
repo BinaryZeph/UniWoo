@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UniWoo Tweaks
 // @namespace    https://github.com/BinaryZeph/UniWoo
-// @version      0.6
+// @version      0.8
 // @description  Small tweaks for UniWoo Power Users
 // @author       Tim Rainey
 // @match        http://uniwoo.com/
@@ -15,12 +15,21 @@ $(document).ready(function() {
     $('<ul class="uk-navbar-nav" id="uniwooTweaks"><li class="uk-margin-left"><i class="uk-icon-cog"></i> UniWoo Tweaks</li></ul>').appendTo($('footer .uk-navbar'));
 
     // Default Modal
-    $('<div id="uniwooTweaksMenu-Default" title="UniWoo Tweaks" style="display:none;"> \
-      <div>Activate Job: <input type="number" length="5" id="uniwooTweaks-JobNumber"> <button id="uniwooTweaks-Go">Activate</button></div> \
+    $('<div id="uniwooTweaksMenu-Default" class="uk-modal uk-open" title="UniWoo Tweaks" style="display:none;"> \
+      <b>Under the Hood Job Info</b><br> \
+      BP ID: <span id="uniwooTweaksInfo-BPCardCode"></span><br> \
+      Contact ID: <span id="uniwooTweaksInfo-BPContactCode"></span><br> \
+      <br> \
+      <b>Activate a Broken Job</b><br> \
+      <div>Job #: <input type="number" length="5" id="uniwooTweaks-JobNumber"> <button id="uniwooTweaks-Go">Activate</button></div> \
       </div>').appendTo($('body'));
 
     //Listen for Link Clicks
     $( "#uniwooTweaks" ).click(function() {
+        //Update Modal Data
+        $("#uniwooTweaksInfo-BPCardCode").html(TSForm.loadedData[TSForm.masterObj].U_BPCardCode);
+        $("#uniwooTweaksInfo-BPContactCode").html(TSForm.loadedData.woInitialContact.Code);
+        
         $( "#uniwooTweaksMenu-Default" ).dialog();
     });
     
