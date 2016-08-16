@@ -5,6 +5,8 @@
 // @description  Small tweaks for UniWoo Power Users
 // @author       Tim Rainey
 // @match        http://uniwoo.com/
+// @updateURL    https://github.com/BinaryZeph/UniWoo/blob/master/UniWoo%20Tweaks.user.js
+// @downloadURL  https://github.com/BinaryZeph/UniWoo/blob/master/UniWoo%20Tweaks.user.js
 // @grant        none
 // ==/UserScript==
 
