@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         UniWoo Tweaks
-// @namespace    https://github.com/BinaryZeph/UniWoo/
-// @version      0.4
+// @namespace    https://github.com/BinaryZeph/UniWoo
+// @version      0.5
 // @description  Small tweaks for UniWoo Power Users
 // @author       Tim Rainey
 // @match        http://uniwoo.com/
-// @updateURL    https://github.com/BinaryZeph/UniWoo/blob/master/UniWoo%20Tweaks.user.js
-// @downloadURL  https://github.com/BinaryZeph/UniWoo/blob/master/UniWoo%20Tweaks.user.js
+// @updateURL    https://github.com/BinaryZeph/UniWoo/raw/master/UniWoo%20Tweaks.user.js
+// @downloadURL  https://github.com/BinaryZeph/UniWoo/raw/master/UniWoo%20Tweaks.user.js
 // @grant        none
 // ==/UserScript==
 
